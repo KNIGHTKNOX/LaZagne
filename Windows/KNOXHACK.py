@@ -2,7 +2,7 @@
 
 ##############################################################################
 #                                                                            #
-#                           By Alessandro ZANNI                              #
+#                                  KNOXHACK                                  #
 #                                                                            #
 ##############################################################################
 
@@ -13,10 +13,10 @@
 from lazagne.softwares.browsers.mozilla import Mozilla
 
 # Configuration
-from lazagne.config.write_output import parseJsonResultToBuffer, print_debug, StandartOutput
-from lazagne.config.changePrivileges import ListSids, rev2self, impersonate_sid_long_handle
-from lazagne.config.manageModules import get_categories, get_modules
-from lazagne.config.constant import *
+from KNOXHACK.config.write_output import parseJsonResultToBuffer, print_debug, StandartOutput
+from KNOXHACK.config.changePrivileges import ListSids, rev2self, impersonate_sid_long_handle
+from KNOXHACK.config.manageModules import get_categories, get_modules
+from KNOXHACK.config.constant import *
 import argparse
 import time, sys, os
 import logging
@@ -27,7 +27,7 @@ import traceback
 import ctypes
 
 
-# Useful for the pupy project
+# Useful for the KNOX project
 sys.setrecursionlimit(10000) # workaround to this error: RuntimeError: maximum recursion depth exceeded while calling a Python object
 
 # object used to manage the output / write functions (cf write_output file)
@@ -421,7 +421,7 @@ if __name__ == '__main__':
 
 	start_time = time.time()
 
-	for r in runLaZagne(category_choosed, check_specific_drive=check_specific_drive):
+	for r in runKNOXHACK(category_choosed, check_specific_drive=check_specific_drive):
 		pass
 
 	clean_temporary_files()
